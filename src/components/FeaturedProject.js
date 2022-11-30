@@ -4,7 +4,7 @@ import HoverVideoPlayer from 'react-hover-video-player';
 const FeaturedProject = ({ project, src, description, technologies }) => {
   console.log(technologies)
   return (
-    <div className='flex flex-row pt-40 max-w-2/3'>
+    <div className='flex flex-row pt-40 max-w-2/3 ml-[12em]'>
       <div className='flex flex-col pt-10'>
         <span className='featured-project'> Featured Project </span>
         <h3 className='featured-project-title' > {project}</h3>
@@ -24,7 +24,7 @@ const FeaturedProject = ({ project, src, description, technologies }) => {
 
       {/* <img src={src} alt='' className='w-[40em] z-2 relative right-[6em]' /> */}
       <HoverVideoPlayer
-        className='w-[40em] z-2 relative right-[6em]'
+        className='w-[40em] h-[22em] z-2 relative right-[18em]'
         videoSrc="chartsandquery.mp4"
         videoStyle={{
           borderRadius: '0.375rem'

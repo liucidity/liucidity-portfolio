@@ -6,9 +6,9 @@ const About = () => {
   return (
     // <SlideUpComponent>
 
-    <section className='about p-4'>
+    <section className='about p-4' id='about'>
       <div className='flex flex-row justify-center'>
-        <div className='w-[38em] mr-0'>
+        <div className='w-[34em] mr-0'>
           <span className='text-l text-green'> 01.</span>
           <h2 className='text-light-purple text-4xl relative'>
             About Me
@@ -20,7 +20,7 @@ const About = () => {
           <p className='about-p'>Fast-forward to today, I have completed a full stack boot camp for web development, and am actively building apps and projects. My current focus is to create accessible, inclusive products, that empower users or businesses.</p>
 
           <p className='text-light-purple w-2/3 pt-4 pb-4 m-0'>Here are some of my favorite technologies to work with:</p>
-          <ul className='grid grid-rows-3 grid-flow-col gap-2 w-1/3'>
+          <ul className='grid grid-rows-3 grid-flow-col gap-2 w-2/3'>
             <li className='about-list-item'>Javascript (ES6+)</li>
             <li className='about-list-item'>React</li>
             <li className='about-list-item'>Node.JS</li>
@@ -29,7 +29,7 @@ const About = () => {
             <li className='about-list-item'>PostgreSQL</li>
           </ul>
         </div>
-        <div className='flex flex-row items-center justify-start'>
+        <div className='flex flex-row items-center justify-start -ml-12'>
           <img src='me.png' alt='' className='w-[20em] border-solid border-4 outline-offset-2' />
         </div>
 

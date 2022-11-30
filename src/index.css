@@ -17,10 +17,17 @@
   @apply text-light-purple text-3xl mb-4 hover:text-green
 }
 .featured-project-description {
-  @apply text-light-purple bg-ming text-xl w-[30em] p-8 mb-2 z-40 rounded-md shadow-md hover:shadow-md hover:shadow-indigo-500/40
+  @apply text-light-purple bg-ming text-xl w-[30em] p-8 mb-2 z-40 rounded-md shadow-md hover:shadow-2xl transition peer-hover/video-player:opacity-5 group-hover:duration-300
 }
 .featured-project-ul {
   @apply flex flex-row gap-4 w-[30em] z-50
+}
+/* .featured-extra{
+  @apply relative -bottom-12
+} */
+
+.side-panel-item{
+  @apply text-light-purple transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-110 hover:text-green duration-300
 }
 
 ::-webkit-scrollbar {

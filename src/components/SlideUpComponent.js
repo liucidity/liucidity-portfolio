@@ -3,6 +3,7 @@ import { Transition } from '@headlessui/react'
 import { useInView } from 'react-intersection-observer';
 import { InView } from 'react-intersection-observer';
 import { useRef, useCallback } from 'react'
+import { motion } from 'framer-motion';
 
 const SlideUpComponent = ({ children }) => {
   const ref = useRef();
@@ -25,7 +26,19 @@ const SlideUpComponent = ({ children }) => {
 
   return (
     <>
-      <div className='p-6 min-h-screen' ref={setRefs}>
+      <motion.div
+        ref={setRefs}
+        animate={{
+          opacity: inView ? 1 : 0,
+        }}
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.div>
+
+
+
+      {/* <div className='p-6 min-h-screen' ref={setRefs}>
         <Transition show={inView}
           className="h-fit"
           enter="duration-1000 delay-100"
@@ -39,7 +52,7 @@ const SlideUpComponent = ({ children }) => {
           </div>
         </Transition>
 
-      </div>
+      </div> */}
       {/* <div ref={setRefs} >
       </div> */}
     </>

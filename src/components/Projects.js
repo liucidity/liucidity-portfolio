@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     // <SlideUpComponent>
 
-    <section className='p-8 flex flex-col items-center mt-[20em] max-w-2/3 h-fit'>
+    <section className='p-8 flex flex-col items-center mt-[20em] max-w-2/3 h-fit ml-[20em]' id='projects'>
       <div>
 
         <div className='flex flex-col'>
@@ -24,7 +24,7 @@ const Projects = () => {
             <span className='h-0.5 w-72 bg-light-purple opacity-25 relative block top-[-0.5em] left-[10em]'></span>
           </h2>
         </div>
-        <ul>
+        <ul className='-ml-[12em]'>
 
 
 

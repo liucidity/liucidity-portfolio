@@ -1,5 +1,6 @@
 import React from 'react';
 import SmallProject from './SmallProject';
+import { motion } from 'framer-motion';
 
 const OtherProjects = () => {
   const projectInfo = {
@@ -13,16 +14,44 @@ const OtherProjects = () => {
 
 
   }
-  return (
-    <section className='max-w-2/3 flex flex-col items-center'>
 
-      <div className='grid md:grid-cols-2 lg:grid-cols-3'>
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 1,
+      }
+    }
+  }
+  const item = {
+    hidden: {
+      opacity: 0,
+      x: 20
+    },
+    show: {
+      opacity: 1,
+      y: 0
+    }
+  }
+  return (
+    <section className='max-w-2/3 flex flex-col items-center pt-[20em]'>
+
+      <motion.div className='grid md:grid-cols-2 lg:grid-cols-3'
+        variants={container}
+        initial="hidden"
+        animate="show">
         {Object.keys(projectInfo).map((project) => {
           return (
-            <SmallProject project={project} technologies={projectInfo[project].technologies} description={projectInfo[project].description} />
+            <motion.div
+              variants={item}
+            >
+              <SmallProject project={project} technologies={projectInfo[project].technologies} description={projectInfo[project].description} />
+            </motion.div>
           )
         })}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -4,13 +4,13 @@ import HoverVideoPlayer from 'react-hover-video-player';
 const FeaturedProjectRight = ({ project, src, description, technologies }) => {
   console.log(technologies)
   return (
-    <div className='flex flex-row pt-40 max-w-2/3'>
+    <div className='flex flex-row pt-40 max-w-2/3 mr-[12em]'>
       {/* <div className='rounded-md'> */}
 
       <HoverVideoPlayer
-        className='w-[40em] z-2 relative right-[0em]'
+        className='w-[40em] h-[22em] z-2 relative right-[-12em]'
         videoStyle={{
-          borderRadius: '0.375rem'
+          borderRadius: '0.375rem',
         }}
         videoSrc="chartsandquery.mp4"
         pausedOverlay={
@@ -37,7 +37,7 @@ const FeaturedProjectRight = ({ project, src, description, technologies }) => {
         <span className='featured-project'> Featured Project </span>
         <h3 className='featured-project-title' > {project}</h3>
         <p className='featured-project-description'>{description}</p>
-        <ul className='featured-project-ul'>
+        <ul className='featured-project-ul flex flex-row justify-end'>
           {technologies.map((item) => {
             return (
               <li className='text-light-purple'>{item}</li>
@@ -45,8 +45,8 @@ const FeaturedProjectRight = ({ project, src, description, technologies }) => {
           })}
         </ul>
         <div>
-          <a>Github</a>
-          <a>Demo</a>
+          <a className='text-light-purple'>Github</a>
+          <a className='text-light-purple'>Demo</a>
         </div>
       </div >
 

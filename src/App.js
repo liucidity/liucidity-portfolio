@@ -6,11 +6,15 @@ import OtherProjects from './components/OtherProjects';
 import Contact from './components/Contact'
 import SlideUpComponent from './components/SlideUpComponent';
 import AnimateIn from './components/AnimateIn';
+import Nav from './components/Nav';
+import LeftPanel from './components/LeftPanel';
+import RightPanel from './components/RightPanel';
 function App() {
 
   return (
 
     <main className="bg-[#0B192F] h-min">
+      <Nav />
       <Hero />
 
       <SlideUpComponent>
@@ -23,13 +27,16 @@ function App() {
 
         <Projects />
       </SlideUpComponent>
-      <SlideUpComponent>
-        <OtherProjects />
-      </SlideUpComponent>
+
+      <OtherProjects />
       <SlideUpComponent>
 
         <Contact />
       </SlideUpComponent>
+
+      <LeftPanel />
+      <RightPanel />
+
 
 
 

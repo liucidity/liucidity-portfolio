@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedProject from './FeaturedProject';
 import FeaturedProjectRight from './FeaturedProjectRight';
+import SlideUpComponent from './SlideUpComponent';
 
 const projectInfo = {
   SQLBase: { description: "SQL platform that aids in complete database creation. Allows users to generate ERD's and Queries on their database. Allows users to Seed data and visualize charts on their data. Intended for educational use or additional guide to manipulating databases.", src: "sql.png", technologies: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'MaterialUI', 'MermaidJS'] },
@@ -11,7 +12,9 @@ const projectInfo = {
 
 const Projects = () => {
   return (
-    <section className='p-8 flex flex-col items-center mt-[20em] max-w-2/3'>
+    // <SlideUpComponent>
+
+    <section className='p-8 flex flex-col items-center mt-[20em] max-w-2/3 h-fit'>
       <div>
 
         <div className='flex flex-col'>
@@ -43,6 +46,7 @@ const Projects = () => {
 
       </div>
     </section>
+    // </SlideUpComponent>
   );
 }
 

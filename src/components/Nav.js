@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Nav = () => {
+const Nav = ({ scrollDirection }) => {
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -22,8 +22,11 @@ const Nav = () => {
     }
   }
   return (
-    <header className='h-24 p-4'>
-      <nav>
+
+
+    <header className={`h-24 p-4 sticky transition ${scrollDirection === "down" ? "-top-24" : "top-0"}`
+    }>
+      <nav className=''>
         <div className='nav-logo'>
 
         </div>
@@ -55,7 +58,8 @@ const Nav = () => {
           </motion.li>
         </motion.ol>
       </nav>
-    </header>
+    </header >
+
   );
 }
 

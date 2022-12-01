@@ -9,7 +9,7 @@ const RightPanel = () => {
       transition: {
         staggerChildren: 0.2,
         duration: 1,
-        delay: 2
+        delay: 2.5
       }
     }
   }

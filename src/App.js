@@ -1,4 +1,6 @@
 // import './App.css';
+import { useState, useEffect } from 'react'
+import { useScroll } from 'framer-motion';
 import Hero from './components/Hero';
 import About from './components/About'
 import Projects from './components/Projects';
@@ -10,12 +12,27 @@ import Nav from './components/Nav';
 import LeftPanel from './components/LeftPanel';
 import RightPanel from './components/RightPanel';
 function App() {
+  const [scrollDirection, setScrollDirection] = useState(null)
+  const { scrollY } = useScroll()
 
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset
+    return scrollY.onChange((latest) => {
+      const direction = latest > lastScrollY ? "down" : "up"
+      console.log(lastScrollY, latest)
+      if (direction !== scrollDirection && (latest - lastScrollY > 10 || latest - lastScrollY < -10)) {
+
+        console.log(direction)
+        setScrollDirection(direction)
+      }
+      lastScrollY = latest > 0 ? latest : 0
+    })
+  }, [scrollDirection, scrollY])
   return (
 
     <main className="bg-[#0B192F] h-min">
-      <Nav />
-      <Hero />
+      <Nav scrollDirection={scrollDirection} />
+      <Hero scrollDirection={scrollDirection} />
 
       <SlideUpComponent>
 

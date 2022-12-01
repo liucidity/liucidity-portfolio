@@ -1,7 +1,5 @@
 import React from 'react';
-import { Transition } from '@headlessui/react'
 import { useInView } from 'react-intersection-observer';
-import { InView } from 'react-intersection-observer';
 import { useRef, useCallback } from 'react'
 import { motion } from 'framer-motion';
 

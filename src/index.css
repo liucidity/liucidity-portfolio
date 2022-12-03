@@ -6,22 +6,22 @@
   @apply text-light-purple w-2/3 flex flex-row gap-2 hover:text-green
 }
 .about-p{
-  @apply text-light-purple w-2/3 pt-4 pb-4 m-0
+  @apply text-light-purple pt-4 pb-4 m-0 text-sm md:text-lg
 }
 
 .featured-project{
-  @apply text-green text-sm mb-0.5
+  @apply text-green md:text-sm mb-0.5
 }
 
 .featured-project-title {
-  @apply text-light-purple text-3xl hover:text-green
+  @apply text-light-purple md:text-3xl hover:text-green z-30
 }
 .featured-project-description {
-  @apply text-light-purple bg-ming text-xl w-[30em] p-8 mt-16 mb-2 z-40 rounded-md shadow-md hover:shadow-2xl 
+  @apply text-light-purple bg-ming md:text-lg md:w-[28em] p-4 md:p-6 mt-24 md:mt-8 mb-0 z-30 rounded-md shadow-md hover:shadow-2xl   
 }
 /* transition peer-hover/video:opacity-5 peer-hover/video:duration-300 */
 .featured-project-ul {
-  @apply flex flex-row gap-4 w-[30em] z-50
+  @apply flex flex-row gap-4 md:w-[30em] z-30 pt-10 pb-10 md:pt-0 
 }
 /* .featured-extra{
   @apply relative -bottom-12

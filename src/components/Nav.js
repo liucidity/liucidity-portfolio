@@ -24,13 +24,13 @@ const Nav = ({ scrollDirection }) => {
   return (
 
 
-    <header className={`h-24 p-4 sticky transition ${scrollDirection === "down" ? "-top-24" : "top-0"}`
+    <header className={`h-24 z-50 p-4 sticky transition-transform ease-in-out duration-300 ${scrollDirection === "down" ? "-top-24 -translate-y-24" : "top-0"}`
     }>
-      <nav className=''>
+      <nav className='bg-ming'>
         <div className='nav-logo'>
 
         </div>
-        <motion.ol className='nav-buttons flex flex-row gap-6 justify-end p-4'
+        <motion.ol className='nav-buttons flex flex-row gap-6 justify-end items-center p-4'
           variants={container}
           initial="hidden"
           animate="show"
@@ -52,9 +52,11 @@ const Nav = ({ scrollDirection }) => {
           <motion.li
             variants={item}
           >
-            <button>
-              Resume
-            </button>
+            <a href='mailto:travisliu708@gmail.com' target="_blank" rel="noreferrer" className=''>
+              <button className='text-light-purple rounded-md bg-green/20  p-2 border-green border-2 hover:bg-green/60' >
+                Email Me!
+              </button>
+            </a>
           </motion.li>
         </motion.ol>
       </nav>

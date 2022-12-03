@@ -5,16 +5,17 @@ const FeaturedProject = ({ project, src, video, description, technologies, githu
 
   console.log('demo', demo)
   return (
-    <div className='pt-40 pl-[12em] flex flex-col group hover:scale-110 transition'>
+    <div className='md:pt-40 m-auto flex flex-col items-center group transition md:hover:scale-110'>
 
 
-      <div className='flex flex-row-reverse'>
+      <div className='md:flex flex-row-reverse relative'>
 
 
         <HoverVideoPlayer
-          className='w-[40em] h-[22em] z-2 relative right-[18em] peer hover:z-50 hover:-translate-x-2 transition delay-150'
+          className='md:min-w-[16em] md:h-[9em] md:w-[36em] md:h-[20.25em]  z-2 absolute hover:z-40 peer md:hover:-translate-x-2 transition delay-150  md:-right-[4em] '
           videoSrc={video}
           videoStyle={{
+
             borderRadius: '0.375rem'
           }}
           pausedOverlay={
@@ -37,12 +38,12 @@ const FeaturedProject = ({ project, src, video, description, technologies, githu
           }
         />
 
-        <div className='flex flex-col peer-hover:opacity-70'>
+        <div className='flex flex-col pt-0 items-start absolute md:-left-[8em] peer-hover:opacity-70  transition duration-300'>
           <span className='featured-project'> Featured Project </span>
           <h3 className='featured-project-title' > {project}</h3>
 
           <p className='featured-project-description'>{description}</p>
-          <div className='flex flex-row gap-2'>
+          <div className='flex flex-row justify-start gap-2'>
             {github &&
               <a className='text-light-purple pt-2 hover:text-green' href={github} target="_blank" rel="noreferrer">
                 <svg class="h-8 w-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />
@@ -63,9 +64,9 @@ const FeaturedProject = ({ project, src, video, description, technologies, githu
 
 
       </div >
-      <div className='flex flex-col items-start relative -bottom-6 '>
+      <div className='flex flex-col items-start md:-left-[11em] relative -bottom-6'>
 
-        <ul className='featured-project-ul flex flex-row justify-start'>
+        <ul className='featured-project-ul flex flex-row flex-wrap justify-start'>
           {technologies.map((item) => {
             return (
               <li className='text-light-purple'>{item}</li>

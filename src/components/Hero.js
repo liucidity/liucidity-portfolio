@@ -40,27 +40,27 @@ const Hero = ({ scrollDirection }) => {
   return (
 
 
-    < section className='flex flex-col items-center' >
+    < section className=' flex flex-col items-center' >
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
 
-        className='mt-[12em] mb-[40em]'>
+        className='mt-[4em] p-4 md:mt-[12em] mb-[40em]'>
 
         <motion.h1
           variants={item}
-          className='text-green text-lg font-normal p-4'>Hi! my name is,</motion.h1>
+          className='text-green p-2 font-normal md:text-lg md:p-4'>Hi! my name is,</motion.h1>
         <motion.h2
           variants={item}
-          className='text-light-purple text-7xl font-semibold p-4'>Travis Liu.</motion.h2>
+          className='text-light-purple p-2 text-2xl font-semibold md:text-7xl md:p-4'>Travis Liu.</motion.h2>
         <motion.h2
           variants={item}
-          className='text-dark-purple text-7xl font-semibold p-4'>Full Stack Developer.</motion.h2>
+          className='text-dark-purple p-2 text-2xl font-semibold md:text-7xl md:p-4'>Full Stack Developer.</motion.h2>
         <motion.p
           variants={item}
-          className='text-dark-purple text-lg w-[40em] p-4'>I'm a software developer specializing in building digital experiences. Work that let's me create accessibility for every day people excites me.</motion.p>
+          className='text-dark-purple p-2 text-sm md:text-lg md:w-[40em] md:p-4'>I'm a software developer specializing in building digital experiences. Work that let's me create accessibility for every day people excites me.</motion.p>
         {/* <motion.p
           variants={item}
           className='text-dark-purple text-lg w-[40em] p-4'>I'm a software developer specializing in building digital experiences. Work that let's me create accessibility for every day people excites me.</motion.p> */}

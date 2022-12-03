@@ -3,14 +3,14 @@ import HoverVideoPlayer from 'react-hover-video-player';
 
 const FeaturedProjectRight = ({ project, src, video, description, technologies, github, demo }) => {
   return (
-    <div className='pt-40 pr-[12em] flex flex-col group hover:scale-110 transition ' >
+    <div className='md:pt-40  m-auto  flex flex-col items-center group transition md:hover:scale-110' >
 
-      <div className='flex flex-row '>
+      <div className='md:flex flex-row relative'>
         {/* <div className='rounded-md'> */}
 
 
         <HoverVideoPlayer
-          className='w-[40em] h-[22em] z-2 relative right-[-12em] hover:z-50 peer hover:translate-x-2 transition delay-150 '
+          className='md:min-w-[16em] md:h-[9em] md:w-[36em] md:h-[20.25em] md:right-[8em] z-1 absolute hover:z-40 peer md:hover:translate-x-2 transition delay-150  '
           videoStyle={{
             borderRadius: '0.375rem',
           }}
@@ -36,7 +36,7 @@ const FeaturedProjectRight = ({ project, src, video, description, technologies, 
         />
 
         {/* </div> */}
-        <div className='flex flex-col pt-0 items-end  relative right-[6em] peer-hover:opacity-70'>
+        <div className=' flex flex-col pt-0 items-end  absolute md:-right-[4em] peer-hover:opacity-70 transition duration-300'>
 
           <span className='featured-project'> Featured Project </span>
           <h3 className='featured-project-title' > {project}</h3>
@@ -61,9 +61,9 @@ const FeaturedProjectRight = ({ project, src, video, description, technologies, 
 
 
       </div >
-      <div className='flex flex-col items-end mr-[6em] relative -bottom-6'>
+      <div className='flex flex-col items-end md:-right-[7em] relative  -bottom-6'>
 
-        <ul className='featured-project-ul flex flex-row justify-end'>
+        <ul className='featured-project-ul flex flex-row flex-wrap justify-end'>
           {technologies.map((item) => {
             return (
               <li className='text-light-purple'>{item}</li>

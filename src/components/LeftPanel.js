@@ -24,7 +24,7 @@ const LeftPanel = () => {
     }
   }
   return (
-    <motion.div className='fixed left-12 bottom-0'
+    <motion.div className='fixed left-12 bottom-0 hidden md:block'
       variants={container}
       initial="hidden"
       animate="show"

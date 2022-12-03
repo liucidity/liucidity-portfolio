@@ -24,7 +24,7 @@ const RightPanel = () => {
     }
   }
   return (
-    <motion.div className='fixed -right-2 h-fit w-fit bottom-48 rotate-90'
+    <motion.div className='fixed -right-2 h-fit w-fit bottom-48 rotate-90  hidden md:block'
       variants={container}
       initial="hidden"
       animate="show"

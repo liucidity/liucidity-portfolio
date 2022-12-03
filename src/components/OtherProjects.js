@@ -32,13 +32,13 @@ const OtherProjects = () => {
     },
     show: {
       opacity: 1,
-      y: 0
+      x: 0
     }
   }
   return (
-    <section className='h-screen flex flex-col items-center pt-[20em]'>
+    <section className='h-screen md:flex flex-col items-center pt-[20em]'>
 
-      <motion.div className='grid md:grid-cols-2 lg:grid-cols-3'
+      <motion.div className='md:grid md:grid-cols-2 lg:grid-cols-3'
         variants={container}
         initial="hidden"
         animate="show">
@@ -46,13 +46,14 @@ const OtherProjects = () => {
           return (
             <motion.div
               variants={item}
+              className="m-2 w-auto"
             >
               <SmallProject project={project} technologies={projectInfo[project].technologies} description={projectInfo[project].description} github={projectInfo[project].github} demo={projectInfo[project].demo} />
             </motion.div>
           )
         })}
       </motion.div>
-      <div className='text-green pt-4'>Always building, check back for more!</div>
+      <div className=' text-center text-green pt-4'>Always building, check back for more!</div>
     </section>
   );
 }

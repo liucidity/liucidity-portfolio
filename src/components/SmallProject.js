@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const SmallProject = ({ project, description, technologies, github, demo }) => {
   return (
-    <div className='group bg-ming m-2 p-4 h-[20em] w-[22em] relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-green rounded-lg'>
+    <div className='group bg-ming m-auto md:m-2 mt-2 mb-2 p-4 h-[20em] w-[21em] md:w-[22em] relative transition ease-in-out delay-150 md:hover:-translate-y-1 md:hover:scale-110 duration-300 hover:text-green rounded-lg'>
       <div className='flex flex-row justify-between'>
         <svg class="h-8 w-8 text-light-purple group-hover:text-green delay-150 duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" /></svg>
 

@@ -30,7 +30,7 @@ function App() {
   }, [scrollDirection, scrollY])
   return (
 
-    <main className="bg-[#0B192F] h-min">
+    <main className="bg-[#0B192F] h-min min-w-[375px]">
       <Nav scrollDirection={scrollDirection} />
       <Hero scrollDirection={scrollDirection} />
 
@@ -45,7 +45,10 @@ function App() {
         <Projects />
       </SlideUpComponent>
 
-      <OtherProjects />
+      <SlideUpComponent>
+        <OtherProjects />
+
+      </SlideUpComponent>
       <SlideUpComponent>
 
         <Contact />

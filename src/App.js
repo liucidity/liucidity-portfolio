@@ -30,7 +30,7 @@ function App() {
   }, [scrollDirection, scrollY])
   return (
 
-    <main className="bg-[#0B192F] h-min min-w-[375px]">
+    <main className="bg-[#0B192F] h-min min-w-[375px] scroll-smooth">
       <Nav scrollDirection={scrollDirection} />
       <Hero scrollDirection={scrollDirection} />
 

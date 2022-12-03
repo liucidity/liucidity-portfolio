@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { motion } from 'framer-motion';
 import { useScroll } from 'framer-motion';
+import smoothScrollTo from '../helpers/smoothScrollTo';
 
 const Hero = ({ scrollDirection }) => {
   const container = {
@@ -25,18 +26,7 @@ const Hero = ({ scrollDirection }) => {
       y: 0
     }
   }
-  // const [scrollDirection, setScrollDirection] = useState(null)
-  // const { scrollY } = useScroll()
 
-  // useEffect(() => {
-  //   let lastScrollY = scrollY.current
-  //   return scrollY.onChange((latest) => {
-  //     const direction = latest > lastScrollY ? "down" : "up"
-  //     console.log("Page scroll: ", latest)
-  //     console.log(direction)
-  //     setScrollDirection(direction)
-  //   })
-  // }, [])
   return (
 
 
@@ -69,11 +59,17 @@ const Hero = ({ scrollDirection }) => {
             variants={item}
             className="flex flex-row justify-center pt-[12em]"
           >
+            <a href="/#about" className='rounded-full border-2 border-green text-light-purple pt-3' onClick={e => smoothScrollTo(e, 'about')}>
+              <button>
 
-            <svg className="w-6 h-6 text-green animate-bounce delay-300" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
+
+                <svg className="w-6 h-6 text-green animate-bounce delay-300" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+
+              </button>
+            </a>
           </motion.div>
         }
       </motion.div>

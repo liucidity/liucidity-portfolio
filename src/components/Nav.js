@@ -1,21 +1,21 @@
 import { React, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import smoothScrollTo from '../helpers/smoothScrollTo';
-import MobileNav from './MobileNav.js';
-import UseOutsideClick from '../helpers/useOutsideClick';
+// import MobileNav from './MobileNav.js';
+// import UseOutsideClick from '../helpers/useOutsideClick';
 
 const Nav = ({ scrollDirection }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
+  // const [sidebarOpen, setSidebarOpen] = useState(false)
 
-  const mobileNavRef = useRef(null);
-  const mobileNavOutsideClick = UseOutsideClick(mobileNavRef);
-  if (mobileNavOutsideClick) {
-    const sidebar = document.getElementById('sidebar')
+  // const mobileNavRef = useRef(null);
+  // const mobileNavOutsideClick = UseOutsideClick(mobileNavRef);
+  // if (mobileNavOutsideClick) {
+  //   const sidebar = document.getElementById('sidebar')
 
-    sidebar.classList.toggle('translate-x-full')
-    console.log(sidebar)
+  //   sidebar.classList.toggle('translate-x-full')
+  //   console.log(sidebar)
 
-  }
+  // }
 
 
   // make sure nav can close while clicking outside
@@ -23,15 +23,15 @@ const Nav = ({ scrollDirection }) => {
   // disable scroll with nav bar open
   // blur body while navbar open
 
-  const handleMobileNav = () => {
-    const btn = document.getElementById("mobileNavButton")
+  // const handleMobileNav = () => {
+  //   const btn = document.getElementById("mobileNavButton")
 
-    const sidebar = document.getElementById('sidebar')
-    return sidebar.classList.toggle('translate-x-full')
+  //   const sidebar = document.getElementById('sidebar')
+  //   return sidebar.classList.toggle('translate-x-full')
 
 
 
-  }
+  // }
   console.log(mobileNavOutsideClick)
 
   const container = {

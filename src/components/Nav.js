@@ -5,9 +5,34 @@ import MobileNav from './MobileNav.js';
 import UseOutsideClick from '../helpers/useOutsideClick';
 
 const Nav = ({ scrollDirection }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const mobileNavRef = useRef(null);
   const mobileNavOutsideClick = UseOutsideClick(mobileNavRef);
+  if (mobileNavOutsideClick) {
+    const sidebar = document.getElementById('sidebar')
+
+    sidebar.classList.toggle('translate-x-full')
+    console.log(sidebar)
+
+  }
+
+
+  // make sure nav can close while clicking outside
+
+  // disable scroll with nav bar open
+  // blur body while navbar open
+
+  const handleMobileNav = () => {
+    const btn = document.getElementById("mobileNavButton")
+
+    const sidebar = document.getElementById('sidebar')
+    return sidebar.classList.toggle('translate-x-full')
+
+
+
+  }
+  console.log(mobileNavOutsideClick)
 
   const container = {
     hidden: { opacity: 0 },
@@ -29,34 +54,19 @@ const Nav = ({ scrollDirection }) => {
     }
   }
 
-  // make sure nav can close while clicking outside
-
-  // disable scroll with nav bar open
-  // blur body while navbar open
-
-  const handleMobileNav = () => {
-    const btn = document.getElementById("mobileNavButton")
-
-    const sidebar = document.getElementById('sidebar')
-    return sidebar.classList.toggle('translate-x-full')
-
-
-
-  }
-  console.log(mobileNavOutsideClick)
 
   return (
 
 
-    <header className={`h-24 z-50 md:p-4 sticky transition-transform ease-in-out duration-300 ${scrollDirection === "down" ? "-top-24 -translate-y-24" : "top-0"}`
+    <header className={`h-24 z-50 md:p-4 sticky drop-shadow-md transition-transform ease-in-out duration-300 ${scrollDirection === "down" ? "-top-24 -translate-y-24" : "top-0"}`
     }>
 
 
 
 
-      <MobileNav ref={mobileNavRef} />
 
-      <nav className='bg-ming flex flex-row justify-between'>
+
+      <nav className='bg-oxford-blue flex flex-row justify-between '>
         <div className='nav-logo'>
           <a href='#'>
             <svg class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +76,7 @@ const Nav = ({ scrollDirection }) => {
 
         </div>
 
-        <div className='md:hidden' id="mobileNavButton">
+        {/* <div className='md:hidden' id="mobileNavButton">
           <button onClick={handleMobileNav}>
 
             <svg class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -74,37 +84,43 @@ const Nav = ({ scrollDirection }) => {
             </svg>
           </button>
 
-        </div>
+        </div> */}
+
+
+        {/* <MobileNav ref={mobileNavRef} /> */}
 
 
 
 
-
-        <motion.ol className='nav-buttons hidden md:flex flex-row gap-6 justify-end items-center p-4 '
+        <motion.ol className='nav-buttons md:flex flex-row gap-6 justify-end items-center p-4 '
           variants={container}
           initial="hidden"
           animate="show"
         >
           <motion.li
-            variants={item}>
+            variants={item}
+            className='hidden md:block'
+          >
             <a href="/#about" className='before:content-["01."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'about')}> About</a>
           </motion.li>
           <motion.li
             variants={item}
+            className='hidden md:block'
           >
             <a href="/#projects" className='before:content-["02."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'projects')}> Projects</a>
           </motion.li>
           <motion.li
             variants={item}
+            className='hidden md:block'
           >
             <a href="/#contact" className='before:content-["03."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'contact')}> Contact</a>
           </motion.li>
           <motion.li
             variants={item}
           >
-            <a href='mailto:travisliu708@gmail.com' target="_blank" rel="noreferrer" className='' >
-              <button className='text-light-purple rounded-md bg-green/20  p-2 border-green border-2 hover:bg-green/60' >
-                Email Me!
+            <a href='https://www.canva.com/design/DAFPRmTdgCQ/vTmEhFBq4JM73E2iJ2-z9g/view?utm_content=DAFPRmTdgCQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' target="_blank" rel="noreferrer" className='' >
+              <button className='text-light-purple rounded-md bg-green/20  p-1 border-green border-2 hover:bg-green/60' >
+                Resume
               </button>
             </a>
           </motion.li>

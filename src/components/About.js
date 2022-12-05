@@ -24,7 +24,7 @@ const About = () => {
           <span className='text-md md:text-l text-green'> 01.</span>
           <h2 className='text-light-purple font-semibold text-xl md:text-4xl'>
             About Me
-            <span className='h-0.5 w-64 md:w-96 md:h-0.5  bg-light-purple opacity-25 relative block top-[-0.75em] md:top-[-0.5em] left-[5em]'></span>
+            <span className='h-0.5 w-64 md:w-96 md:h-0.5  bg-light-purple opacity-25 relative block top-[-0.75em] md:top-[-0.5em] left-[5.5em]'></span>
 
           </h2>
         </ div>

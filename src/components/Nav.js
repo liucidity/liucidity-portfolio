@@ -113,19 +113,19 @@ const Nav = ({ scrollDirection }) => {
             variants={item}
             className='hidden md:block'
           >
-            <a href="/#about" className='before:content-["01."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'about')}> About</a>
+            <a href="/#about" className='heading before:content-["01."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'about')}> About</a>
           </motion.li>
           <motion.li
             variants={item}
             className='hidden md:block'
           >
-            <a href="/#projects" className='before:content-["02."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'projects')}> Projects</a>
+            <a href="/#projects" className='heading before:content-["02."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'projects')}> Projects</a>
           </motion.li>
           <motion.li
             variants={item}
             className='hidden md:block'
           >
-            <a href="/#contact" className='before:content-["03."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'contact')}> Contact</a>
+            <a href="/#contact" className='heading before:content-["03."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'contact')}> Contact</a>
           </motion.li>
           <motion.li
             variants={item}

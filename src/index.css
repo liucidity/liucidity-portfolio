@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&family=Fira+Code&family=M+PLUS+1&family=Montserrat:wght@400;600&family=Nunito&family=Oxygen&family=Titillium+Web&display=swap');
+
+@layer base {
+  html {
+    font-family: fira code
+  }
+
+  .heading {
+    font-family: fira code
+  }
+
+
+
+}
+
 .about-list-item {
   @apply text-light-purple w-2/3 flex flex-row gap-2 hover:text-green
 }

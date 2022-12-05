@@ -41,7 +41,7 @@ const Hero = ({ scrollDirection }) => {
 
         <motion.h1
           variants={item}
-          className='text-green p-2 font-normal md:text-lg md:p-4'>Hi! my name is,</motion.h1>
+          className='heading text-green p-2 font-normal md:text-lg md:p-4 '>Hi! My name is,</motion.h1>
         <motion.h2
           variants={item}
           className='text-light-purple p-2 text-2xl font-semibold md:text-7xl md:p-4'>Travis Liu.</motion.h2>

@@ -2,10 +2,10 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className='mt-96 md:mt-0 flex flex-col justify-center items-center h-screen' id='contact'>
+    <section className=' mt-[40em] md:mt-0 flex flex-col justify-center items-center h-screen' id='contact'>
       <span className='text-green text-l'> 03. Contact</span>
       <div>
-        <h2 className='text-light-purple text-6xl relative pt-4'>
+        <h2 className='text-center text-light-purple text-5xl relative pt-4'>
           Get In Touch
           {/* <span className='h-0.5 w-72 bg-light-purple opacity-25 relative block top-[-0.5em] left-[4em]'></span> */}
         </h2>

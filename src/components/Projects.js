@@ -6,7 +6,7 @@ import SlideUpComponent from './SlideUpComponent';
 const projectInfo = {
   BusRiders: { description: "Jack-box-inspired drinking game, where users guess the outcome of the next card to score points. Playable as solo or in multiplayer, with a separate controller client, that can be accessed through any web device.", src: "busriders.png", video: "busriders.mp4", technologies: ['React', 'TypeScript', 'Express', 'NodeJS', 'SocketIO', 'TailwindCSS'], github: "https://github.com/liucidity/ride-the-bus", demo: "https://ride-the-bus.onrender.com/" },
   SQLBase: { description: "SQL platform that aids in complete database creation. Allows users to generate ERD's and Queries on their database. Allows users to seed data and visualize charts on their data.", src: "sql.png", video: "sql.mp4", technologies: ['React', 'Express', 'NodeJS', 'PostgreSQL', 'MaterialUI', 'MermaidJS'], github: "https://github.com/rstock-co/SQLBase", demo: "" },
-  "Angry Vegan Orders": { description: "Food ordering app for an existing restaurant. Modeling after popular food order apps, allows users to add food items to their cart, adjust the quantity, and receive text updates on orders.", src: "sql.png", video: "sql.mp4", technologies: ['JQuery', 'Express', 'NodeJS', 'PostgreSQL', 'SASS', 'Twilio'], github: "https://github.com/liucidity/AngryVeganOrders", demo: "" },
+  "Angry Vegan Orders": { description: "Food ordering app for an existing restaurant. Modeling after popular food order apps, allows users to add food items to their cart, adjust the quantity, and receive text updates on orders.", src: "angry.png", video: "sql.mp4", technologies: ['JQuery', 'Express', 'NodeJS', 'PostgreSQL', 'SASS', 'Twilio'], github: "https://github.com/liucidity/AngryVeganOrders", demo: "" },
 
 }
 

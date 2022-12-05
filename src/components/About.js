@@ -35,7 +35,7 @@ const About = () => {
 
             <p className='about-p'>Hello! My name is Travis and I enjoy creating things on the internet. I first started coding with scratch from a young age, before moving onto HTML and CSS. From there I taught myself Mobile development with Java, and continued to learn about web development.</p>
 
-            <p className='about-p'>Fast-forward to today, I have completed a full stack boot camp for web development, and am actively building apps and projects. My current focus is to create accessible, inclusive products, that empower users or businesses.</p>
+            <p className='about-p'>Fast-forward to today, I have completed a full stack boot camp for web development, and am actively building apps and projects. My current focus is to create accessible and inclusive products that empower users or businesses.</p>
 
             <p className='text-light-purple pt-4 pb-4 m-0'>Here are some of my favorite technologies to work with:</p>
             <ul className='grid grid-rows-3 grid-flow-col gap-2'>

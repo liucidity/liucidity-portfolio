@@ -53,7 +53,7 @@ const Hero = ({ scrollDirection }) => {
           className='text-dark-purple p-2 text-sm md:text-lg md:w-[40em] md:p-4'>I'm a software developer specializing in building digital experiences. Work that let's me create accessibility for every day people excites me.</motion.p>
         {/* <motion.p
           variants={item}
-          className='text-dark-purple text-lg w-[40em] p-4'>I'm a software developer specializing in building digital experiences. Work that let's me create accessibility for every day people excites me.</motion.p> */}
+          className='text-dark-purple text-lg w-[40em] p-4'>I'm a software developer specializing in building digital experiences. Work that lets me create accessibility for everyday people excites me.</motion.p> */}
         {scrollDirection !== "down" &&
           <motion.div
             variants={item}

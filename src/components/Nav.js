@@ -32,7 +32,7 @@ const Nav = ({ scrollDirection }) => {
 
 
   // }
-  console.log(mobileNavOutsideClick)
+  // console.log(mobileNavOutsideClick)
 
   const container = {
     hidden: { opacity: 0 },
@@ -40,6 +40,7 @@ const Nav = ({ scrollDirection }) => {
       opacity: 1,
       transition: {
         staggerChildren: 0.3,
+
       }
     }
   }
@@ -66,15 +67,26 @@ const Nav = ({ scrollDirection }) => {
 
 
 
-      <nav className='bg-oxford-blue flex flex-row justify-between '>
-        <div className='nav-logo'>
+      <motion.nav
+        className='bg-oxford-blue flex flex-row justify-between '
+        variants={container}
+      >
+
+        <motion.div
+          className='nav-logo'
+          initial={{
+            opacity: 0
+          }}
+          animate={{
+            opacity: 1,
+            duration: 2
+          }}
+        >
           <a href='#'>
-            <svg class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
+            <img src='LTC.png' className='w-12 m-2' alt='logo' />
           </a>
 
-        </div>
+        </motion.div>
 
         {/* <div className='md:hidden' id="mobileNavButton">
           <button onClick={handleMobileNav}>
@@ -125,7 +137,7 @@ const Nav = ({ scrollDirection }) => {
             </a>
           </motion.li>
         </motion.ol>
-      </nav>
+      </motion.nav>
     </header >
 
   );

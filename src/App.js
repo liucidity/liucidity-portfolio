@@ -11,6 +11,10 @@ import AnimateIn from './components/AnimateIn';
 import Nav from './components/Nav';
 import LeftPanel from './components/LeftPanel';
 import RightPanel from './components/RightPanel';
+
+
+
+
 function App() {
   const [scrollDirection, setScrollDirection] = useState(null)
   const { scrollY } = useScroll()
@@ -19,10 +23,10 @@ function App() {
     let lastScrollY = window.pageYOffset
     return scrollY.onChange((latest) => {
       const direction = latest > lastScrollY ? "down" : "up"
-      console.log(lastScrollY, latest)
+
       if (direction !== scrollDirection && (latest - lastScrollY > 10 || latest - lastScrollY < -10)) {
 
-        console.log(direction)
+
         setScrollDirection(direction)
       }
       lastScrollY = latest > 0 ? latest : 0

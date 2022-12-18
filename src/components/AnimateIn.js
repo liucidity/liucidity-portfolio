@@ -19,7 +19,7 @@ const AnimateIn = (props) => {
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >
-        {console.log(inView, ref)}
+        {/* {console.log(inView, ref)} */}
         {props.children}
       </Transition>
       <div ref={ref} />

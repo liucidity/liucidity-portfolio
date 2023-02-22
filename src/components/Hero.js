@@ -1,7 +1,4 @@
-import { useEffect, useState } from 'react';
-import { Transition } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import { useScroll } from 'framer-motion';
 import smoothScrollTo from '../helpers/smoothScrollTo';
 
 const Hero = ({ scrollDirection }) => {

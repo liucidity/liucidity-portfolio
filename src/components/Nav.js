@@ -88,55 +88,66 @@ const Nav = ({ scrollDirection }) => {
 
         </motion.div>
 
-        {/* <div className='md:hidden' id="mobileNavButton">
+        <motion.div className='flex justi-row justify-between'>
+
+          <motion.div
+            variants={item}
+            className=''
+          >
+            <a href="/blog" className='heading text-light-purple'>Blog</a>
+          </motion.div>
+
+          {/* <div className='md:hidden' id="mobileNavButton">
           <button onClick={handleMobileNav}>
-
-            <svg class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
+          
+          <svg class="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
           </button>
-
+          
         </div> */}
 
 
-        {/* <MobileNav ref={mobileNavRef} /> */}
+          {/* <MobileNav ref={mobileNavRef} /> */}
 
 
 
 
-        <motion.ol className='nav-buttons md:flex flex-row gap-6 justify-end items-center p-4 '
-          variants={container}
-          initial="hidden"
-          animate="show"
-        >
-          <motion.li
-            variants={item}
-            className='hidden md:block'
+          <motion.ol className='nav-buttons md:flex flex-row gap-6 justify-end items-center p-4 '
+            variants={container}
+            initial="hidden"
+            animate="show"
           >
-            <a href="/#about" className='heading before:content-["01."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'about')}> About</a>
-          </motion.li>
-          <motion.li
-            variants={item}
-            className='hidden md:block'
-          >
-            <a href="/#projects" className='heading before:content-["02."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'projects')}> Projects</a>
-          </motion.li>
-          <motion.li
-            variants={item}
-            className='hidden md:block'
-          >
-            <a href="/#contact" className='heading before:content-["03."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'contact')}> Contact</a>
-          </motion.li>
-          <motion.li
-            variants={item}
-          >
-            <a href='https://www.canva.com/design/DAFPRmTdgCQ/vTmEhFBq4JM73E2iJ2-z9g/view?utm_content=DAFPRmTdgCQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' target="_blank" rel="noreferrer" className='' >
-              <button className='text-light-purple rounded-md bg-green/20  p-1 border-green border-2 hover:bg-green/60' >
-                Resume
-              </button>
-            </a>
-          </motion.li>
-        </motion.ol>
+            <motion.li
+              variants={item}
+              className='hidden md:block'
+            >
+              <a href="/#about" className='heading before:content-["01."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'about')}> About</a>
+            </motion.li>
+            <motion.li
+              variants={item}
+              className='hidden md:block'
+            >
+              <a href="/#projects" className='heading before:content-["02."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'projects')}> Projects</a>
+            </motion.li>
+
+            <motion.li
+              variants={item}
+              className='hidden md:block'
+            >
+              <a href="/#contact" className='heading before:content-["03."] before:text-green text-light-purple' onClick={(e) => smoothScrollTo(e, 'contact')}> Contact</a>
+            </motion.li>
+            <motion.li
+              variants={item}
+            >
+              <a href='https://www.canva.com/design/DAFPRmTdgCQ/vTmEhFBq4JM73E2iJ2-z9g/view?utm_content=DAFPRmTdgCQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' target="_blank" rel="noreferrer" className='' >
+                <button className='text-light-purple rounded-md bg-green/20  p-1 border-green border-2 hover:bg-green/60' >
+                  Resume
+                </button>
+              </a>
+            </motion.li>
+          </motion.ol>
+        </motion.div>
       </motion.nav>
     </header >
 

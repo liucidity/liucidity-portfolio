@@ -3,7 +3,6 @@ import HoverVideoPlayer from 'react-hover-video-player';
 
 const FeaturedProject = ({ project, src, video, description, technologies, github, demo }) => {
 
-  console.log('demo', demo)
   return (
     <div className='md:pt-40 m-auto flex flex-col items-center group transition md:hover:scale-110'>
 

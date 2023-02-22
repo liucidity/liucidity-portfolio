@@ -1,7 +1,6 @@
 import React from 'react';
-import SlideUpComponent from './SlideUpComponent';
 
-const itemStyle = "text-light-purple w"
+// const itemStyle = "text-light-purple w"
 const About = () => {
   return (
     // <SlideUpComponent>

@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import OtherProjects from './components/OtherProjects';
 import Contact from './components/Contact'
 import SlideUpComponent from './components/SlideUpComponent';
-import AnimateIn from './components/AnimateIn';
 import Nav from './components/Nav';
 import LeftPanel from './components/LeftPanel';
 import RightPanel from './components/RightPanel';
